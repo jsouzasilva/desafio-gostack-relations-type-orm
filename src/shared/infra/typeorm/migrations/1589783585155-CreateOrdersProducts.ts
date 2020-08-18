@@ -14,14 +14,7 @@ export default class CreateOrdersProducts1589783585155
             generationStrategy: 'uuid',
             default: 'uuid_generate_v4()',
           },
-          {
-            name: 'product_id',
-            type: 'uuid',
-          },
-          {
-            name: 'order_id',
-            type: 'uuid',
-          },
+
           {
             name: 'price',
             type: 'decimal',
@@ -42,25 +35,7 @@ export default class CreateOrdersProducts1589783585155
             type: 'timestamp',
             default: 'now()',
           },
-        ],
-        foreignKeys: [
-          {
-            name: 'ProductId',
-            columnNames: ['product_id'],
-            referencedColumnNames: ['id'],
-            referencedTableName: 'products',
-            onUpdate: 'CASCADE',
-            onDelete: 'SET NULL',
-          },
-          {
-            name: 'OrderId',
-            columnNames: ['order_id'],
-            referencedColumnNames: ['id'],
-            referencedTableName: 'orders',
-            onUpdate: 'CASCADE',
-            onDelete: 'SET NULL',
-          },
-        ],
+        ]
       }),
     );
   }
